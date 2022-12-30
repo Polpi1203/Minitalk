@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:22:43 by polpi             #+#    #+#             */
-/*   Updated: 2022/12/30 14:55:38 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/12/30 20:10:32 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void	send_signal_end(int pid, char c)
 {
-	int				i;
 	int				j;
 	unsigned char	bit;
 
-	i = -1;
 	j = -1;
 	while (++j < 8)
 	{
