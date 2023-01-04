@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:22:43 by polpi             #+#    #+#             */
-/*   Updated: 2022/12/30 20:10:32 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/04 08:52:46 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ void	send_signal(int pid, char *str)
 				kill(pid, SIGUSR2);
 			else if (bit == 1)
 				kill(pid, SIGUSR1);
-			usleep(70);
-		}
+			usleep(60);
+		} 
 	}
 	send_signal_end(pid, 0);
 }
@@ -60,7 +60,7 @@ int main(int ac, char **av)
 
 	pid = ft_atoi(av[1]);
 	if (ac == 3)
-	{
 		send_signal(pid, av[2]);
-	}
+	else
+		ft_printf("The first arg should be the server pid, the second one the message.\n");
 }
